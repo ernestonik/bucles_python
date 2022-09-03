@@ -12,6 +12,15 @@
 # Dado la siguiente lista de colores, utilizar "for"
 # para imprimir en pantalla todos los colores
 colores = ['rojo', 'naranja', 'verde', 'azul']
+col_l =len(colores)
+for i in range (col_l):
+    if (i % 2) == 0:
+       color = colores[i]
+       print (color)
+    else:
+     color = colores[i]
+     print (color)
+      
 
 # Itere el "for" utilizando la lista como parámero
 # y utilizar como elemento del "for" cada color
