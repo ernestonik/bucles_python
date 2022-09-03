@@ -18,8 +18,28 @@
 
 inicio = int(input('Ingrese el primer número de la secuencia\n'))
 fin = int(input('Ingrese el último número de la secuencia\n'))
-
+numeros = range(inicio, fin + 1)
 cantidad_numeros_positivos = 0  # Inicializo el contador en 0
+
+for i in range(inicio, fin):
+    print (inicio)
+    inicio += 1
+    if i == fin - 1:
+        print (fin)
+   
+cantidad_numeros_positivos = 0
+cantidad_numeros_negativos = 0
+numeros_posi =[]
+numeros_nega =[]
+
+for numero in numeros:
+    if numero >= 0:
+        numeros_posi.append(numero)
+    elif numero < 0:
+        numeros_nega.append(numero)
+
+print ("Positivos", numeros_posi, "en total son", len(numeros_posi))
+print ("Negativos", numeros_nega, "en total son", len(numeros_nega))
 
 # for ... in range(....)
 
