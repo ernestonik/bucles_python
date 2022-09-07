@@ -33,5 +33,37 @@ Se debe debe imprimir un cartel de error si el operador ingresado no es
 alguno de lo soportados o no es la palabra "FIN".
 '''
 
+from http.client import MULTIPLE_CHOICES
+
+
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+numero1 = int(input('Ingrese el primer número\n'))
+numero2 = int(input('Ingrese el segundo número\n'))
+print(''' Ingresa la operacion:
+(+)  Suma 
+(-)  Resta 
+(*)  Multiplicación 
+(/)  División 
+(**) Exponente/Potencia 
+(x)  Detener''')
+operacion = str(input ())
+
+while operacion =="+":
+    suma = numero1 + numero2
+    print ("El resultado de su suma es; ", suma)
+    if operacion == "-":
+        resta = numero1 - numero2
+        print ("El resultado de su resta es; ", resta)
+    if operacion == "*":
+         Multiplicacion = numero1 * numero2
+         print ("El resultado de su multiplicacion es; ", Multiplicacion)
+    if operacion == "/":
+         division = numero1 / numero2
+         print ("El resultado de su division es; ", division)
+    if operacion == "**":
+         expo = numero1 ** numero2
+         print ("El resultado de su operaicon es; ", expo)           
+    if operacion == "x":
+        print("FIN")
+        break
