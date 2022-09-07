@@ -49,21 +49,24 @@ print(''' Ingresa la operacion:
 (x)  Detener''')
 operacion = str(input ())
 
-while operacion =="+":
-    suma = numero1 + numero2
-    print ("El resultado de su suma es; ", suma)
-    if operacion == "-":
+while operacion != "x":
+     if operacion == "+":
+          suma = numero1 + numero2
+          print ("El resultado de su suma es; ", suma)
+     if operacion == "-":
         resta = numero1 - numero2
         print ("El resultado de su resta es; ", resta)
-    if operacion == "*":
+     if operacion == "*":
          Multiplicacion = numero1 * numero2
          print ("El resultado de su multiplicacion es; ", Multiplicacion)
-    if operacion == "/":
+     if operacion == "/":
          division = numero1 / numero2
          print ("El resultado de su division es; ", division)
-    if operacion == "**":
+     if operacion == "**":
          expo = numero1 ** numero2
          print ("El resultado de su operaicon es; ", expo)           
-    if operacion == "x":
+     if operacion == "x":
         print("FIN")
         break
+     else:
+          break
