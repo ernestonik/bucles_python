@@ -66,6 +66,21 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 # Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
 
+cantidad_notas = [x for x in notas: if x >= 0 ]
+print(cantidad_notas)
+
+cantidad_ausentes = [y for y in notas: if y < 0]
+print(cantidad_ausentes)
+
+sumatoria = sum(cantidad_notas)
+print(sumatoria)
+
+cantidad_numeros = len(range(cantidad_notas))
+print(cantidad_numeros)
+
+
+promedio = sumatoria / cantidad_numeros
+print (promedio)
 
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
