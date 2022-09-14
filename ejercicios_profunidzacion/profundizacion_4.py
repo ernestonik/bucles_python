@@ -10,6 +10,9 @@
 # de mucho más tiempo para abordar estos temas por su cuenta.
 # Requiere mayor tiempo de dedicación e investigación autodidacta.
 
+from tkinter import Y
+
+
 temp_dataloger = [12.8, 18.6, 14.5, 20.8, 12.1, 21.2, 13.5, 18.6,
                   14.7, 19.6, 11.2, 18.4]
 
@@ -50,6 +53,18 @@ temperatura_promedio = 0    # Al finalizar el loop deberá aquí alamcenar el pr
 temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la lista
 
 # Colocar el bucle aqui......
+for x in temp_dataloger:
+    if (temperatura_max is None) or (x > temperatura_max):
+        temperatura_max = x
+
+print ("La temperatura maxima es", temperatura_max)
+
+for x in temp_dataloger:
+    if (temperatura_min is None) or (x < temperatura_min):
+        temperatura_min = x
+
+print ("La temperatura minima es", temperatura_min)
+
 
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
@@ -59,6 +74,16 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+
+for c in temp_dataloger:
+    if c >= 0:
+        temperatura_sumatoria += c
+
+cantidad_temperatuas = len(temp_dataloger)
+
+temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
+print ("Promedio", temperatura_promedio)
+
 
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
@@ -83,3 +108,12 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 # ¿En qué época del año nos encontramos?
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+if (temperatura_min > 19) and (temperatura_max < 28):
+    print ("Verano")
+elif (temperatura_min > 11) and (temperatura_max < 20):
+    print ("Otoño")
+elif (temperatura_min > 8) and (temperatura_max < 14):
+    print ("Invierno")    
+elif (temperatura_min > 10) and (temperatura_max < 24):
+    print ("Primavera")
